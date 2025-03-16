@@ -29,14 +29,14 @@ const DataHandler = (function() {
     const customers = {};
     const processed = [];
     
-    // Process each row
     csvData.forEach(row => {
-      // Skip rows without customer number
-      if (!row.CustomerNumber || row.CustomerNumber.trim() === '') {
-        return;
-      }
-      
-      const customerNum = row.CustomerNumber.trim();
+  // Skip rows without customer number
+  if (!row.CustomerNumber || safeString(row.CustomerNumber) === '') {
+    return;
+  }
+  
+  const customerNumber = safeString(row.CustomerNumber);  // Ensure it's a string
+  console.log(`Processing customer: ${customerNumber}`);
       
       // If this is first entry for this customer
       if (!customers[customerNum]) {
