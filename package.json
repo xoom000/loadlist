@@ -1,0 +1,53 @@
+{
+  "name": "route-33-guide",
+  "version": "1.0.0",
+  "description": "Privacy-focused, web-based route management tool for delivery drivers",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -c-1 -p 8080",
+    "test": "node test-runner.js",
+    "lint": "eslint *.js",
+    "deploy": "gh-pages -d .",
+    "build": "mkdir -p dist && cp -r *.html *.js *.css README.md dist/",
+    "package": "bash package.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xoom000/loadlist.git"
+  },
+  "keywords": [
+    "route",
+    "guide",
+    "delivery",
+    "csv",
+    "privacy",
+    "offline"
+  ],
+  "author": "Josh via Claude",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xoom000/loadlist/issues"
+  },
+  "homepage": "https://github.com/xoom000/loadlist#readme",
+  "devDependencies": {
+    "eslint": "^8.45.0",
+    "gh-pages": "^6.0.0",
+    "http-server": "^14.1.1"
+  },
+  "dependencies": {
+    "papaparse": "^5.4.1",
+    "jspdf": "^2.5.1",
+    "file-saver": "^2.0.5",
+    "localforage": "^1.10.0",
+    "pako": "^2.1.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ],
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  }
+}
