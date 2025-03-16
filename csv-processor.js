@@ -92,7 +92,7 @@ const CSVProcessor = (function() {
         }
         
         // Process item data
-        const itemId = safeString(row.ItemID);
+        const itemId = safeString(row.ItemID) || "unknown";
         if (itemId) {
           totalItems++;
           customersWithItems.add(customerNumber);
